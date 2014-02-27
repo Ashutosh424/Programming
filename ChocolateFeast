@@ -1,0 +1,47 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
+import java.io.IOException;
+import java.util.Scanner;
+import static java.lang.System.out;
+
+/**
+ *
+ * @author Ashutosh
+ */
+public class ChocolateFeast {
+
+    /**
+     * @param args the command line arguments
+     * @throws java.io.IOException
+     */
+    public static void main(String[] args)throws IOException {
+        // TODO code application logic here
+        Scanner s =new Scanner(System.in);
+        int t,c,m,wrapper,totalChocolate;
+        long n;
+        t=s.nextInt();
+        while(t!=0)
+        {
+            n=s.nextLong();
+            c=s.nextInt();
+            m=s.nextInt();
+            totalChocolate=(int) (n/(long)(c));
+            wrapper=totalChocolate;
+            while((wrapper-=m)>=0)
+            {
+                totalChocolate++;
+                wrapper++;
+            }
+            out.println(totalChocolate);
+            
+            t--;
+        }
+        
+    }
+    
+}
